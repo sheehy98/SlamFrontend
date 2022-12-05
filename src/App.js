@@ -26,7 +26,7 @@ import Slam from "./components/Slam";
 import Leaderboard from "./components/Leaderboard";
 
 import io from "socket.io-client";
-const socket = io.connect('192.168.1.169:3001/')
+const socket = io.connect('https://playslamapi.herokuapp.com/')
 
 function App() {
   const [model, setModel] = React.useState(new Model());
