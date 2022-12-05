@@ -46,6 +46,7 @@ export function start(model, randInt) {
   model.deal(randInt)
   model.setIsPlaying(true)
   model.setMessage("")
+  model.setStartTime(Date.now())
   return model.copy()
 }
 
@@ -84,6 +85,7 @@ export function won(model, user) {
   model.setMessage("")
   model.setReady(false)
   model.setUsedWords([])
+  model.setEndTime(Date.now())
   return model.copy()
 }
 

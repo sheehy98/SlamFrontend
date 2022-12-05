@@ -6,6 +6,8 @@ export default class Model {
     this.lobby = null
     this.players = []
     this.isPlaying = false
+    this.startTime = 0
+    this.time = ""
     this.deck = []
     this.word = "SLAM"
     this.usedWords = []
@@ -50,6 +52,28 @@ export default class Model {
   setIsPlaying(isPlaying) {
     this.isPlaying = isPlaying
     this.selected = null
+  }
+
+  setStartTime(startTime) {
+    this.startTime = startTime
+  }
+
+  setEndTime(endTime) {
+    let diff = endTime - this.startTime
+    let newTime = ""
+
+    newTime += Math.floor(diff / 60000).toString()
+    newTime += ':'
+    if (Math.floor((diff % 60000) / 1000) < 10) {
+      newTime += '0'
+    }
+    newTime += Math.floor((diff % 60000) / 1000).toString()
+
+    this.time = newTime
+  }
+
+  setTime(time) {
+    this.time = time
   }
 
   setDeck(deck) {
@@ -189,6 +213,8 @@ export default class Model {
     modelCopy.setLobby(this.lobby)
     modelCopy.setPlayers(this.players)
     modelCopy.setIsPlaying(this.isPlaying)
+    modelCopy.setStartTime(this.startTime)
+    modelCopy.setTime(this.time)
     modelCopy.setDeck(this.deck)
     modelCopy.setWord(this.word)
     modelCopy.setUsedWords(this.usedWords)

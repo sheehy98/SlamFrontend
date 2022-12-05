@@ -9,7 +9,11 @@ class Game extends Component {
   render() {
     return (
       <div style={layout.game}>
-        <Winner winner={this.props.current.winner}/>
+        <Winner
+          winner={this.props.current.winner}
+          solo={this.props.current.players.length === 1}
+          time={this.props.current.time}
+        />
         <Center 
           current={this.props.current}
           playHandler={this.props.playHandler}
