@@ -123,7 +123,7 @@ function App() {
 
   const handleNewWord = word => {
     let newModel = setWord(model, word)
-    if (newModel.isStuck()) {
+    if (!newModel.hasWon() && newModel.isStuck()) {
       handleStuck()
     }
     setModel(newModel)
