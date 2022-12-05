@@ -67,7 +67,6 @@ function App() {
 
   const handleRollcallResponse = (data) => {
     let newModel = addPlayer(model, data.username, data.isReady)
-    console.log(data.count)
     if (newModel.players.filter(player => player[1]).length === data.count) {
       newModel = start(newModel, data.randInt)
     }
