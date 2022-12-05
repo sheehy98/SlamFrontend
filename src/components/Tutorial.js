@@ -4,9 +4,7 @@ import { layout } from "../Layout.js";
 class Tutorial extends Component {
   render() {
     return (
-      <div>
-        
-      </div>
+      <img src={require('../assets/Tutorial.png')} style={layout.tutorial} alt="Tutorial"/>
     );
   }
 }

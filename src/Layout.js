@@ -5,6 +5,11 @@ export const layout = {
     borderBottom: "1px solid #ccc",
     paddingLeft: "0",
     marginTop: 0,
+    width: '100%',
+    display: 'grid',
+    gridTemplateColumns: 'auto auto auto',
+    textAlign: 'center',
+    fontSize: '20px'
   },
 
   tabListItem: {
@@ -18,10 +23,20 @@ export const layout = {
     display: "inline-block",
     listStyle: "none",
     marginBottom: "-1px",
+    marginTop: "-1px",
     padding: "0.5rem 1rem",
     backgroundColor: "white",
     border: "solid #ccc",
     borderWidth: "1px 1px 0 1px",
+  },
+
+  tutorial: {
+    position: 'absolute',
+    top: '9%',
+    left: '50%',
+    transform: 'translate(-50%, 0)',
+    width: '762px',
+    height: '416px'
   },
 
   lobbyInputs: {
@@ -34,34 +49,76 @@ export const layout = {
   inputPair: {
     display: "grid",
     width: "300px",
-    gridTemplateColumns: "120px auto",
+    height: '25px',
+    gridTemplateColumns: "120px 180px",
+    marginBottom: "10px",
   },
 
-  inputLabel: {},
+  inputLabel: {
+    fontSize: '20px',
+    fontFamily: 'verdana'
+  },
 
-  inputInput: {},
+  inputInput: {
+    border: 'none',
+    borderBottom: '2px solid black',
+    fontSize: '20px',
+    fontFamily: 'verdana'
+  },
 
   joinButton: {
     width: "100%",
+    height: '40px',
+    border: '1px solid #eee',
+    backgroundColor: '#ccc',
+    fontFamily: 'verdana',
+    fontSize: '20px'
   },
 
   lobbyPanel: {
     position: "absolute",
     right: "15px",
-    width: "250px",
+    width: "300px",
   },
 
   panelLabel: {
     display: "grid",
-    width: "250px",
-    gridTemplateColumns: "150px 100px",
+    width: "300px",
+    gridTemplateColumns: "200px 100px",
+    fontFamily: 'verdana',
+    fontSize: '18px',
+    marginBottom: '5px'
+  },
+
+  playerPair: {
+    display: "grid",
+    width: "300px",
+    height: '25px',
+    gridTemplateColumns: "200px 100px",
+    fontFamily: 'verdana',
+    fontSize: '18px',
+    border: '2px solid black',
+    marginBottom: '-2px'
   },
 
   td: {
-    border: '1px black solid'
+    fontFamily: 'verdana',
+    fontSize: '18px'
+  },
+
+  td2: {
+    fontFamily: 'verdana',
+    fontSize: '18px',
+    textAlign: 'center'
   },
 
   panelButton: {
+    width: '100%',
+    height: '100%',
+    border: '1px solid #eee',
+    backgroundColor: '#ccc',
+    fontFamily: 'verdana',
+    fontSize: '18px'
   },
 
   winner: {
@@ -94,16 +151,17 @@ export const layout = {
 
   flip: {
     position: 'absolute',
-    top: '25%',
-    left: '15%',
-    width: '150px',
-    height: '40px',
-    borderRadius: '5%',
+    top: '75%',
+    left: '50%',
+    width: '80%',
+    transform: 'translate(-50%, 0)',
+    height: '150px',
+    borderRadius: '5px',
     border: '1px solid #eee',
-    backgroundColor: '#eee',
-    lineHeight: '40px',
+    backgroundColor: '#aaa',
+    lineHeight: '150px',
     textAlign: 'center',
-    fontSize: '25px',
+    fontSize: '50px',
     fontFamily: 'Verdana'
   },
 

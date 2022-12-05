@@ -34,22 +34,22 @@ class LobbyPanel extends Component {
               this.props.readyHandler();
             }}
           >
-            {this.props.current.isReady ? "Not Ready!" : "I'm Ready!"}
+            {this.props.current.isReady ? "Unready!" : "Ready!"}
           </button>
         </div>
 
         {this.props.current.players.map((player) => {
           return (
-            <div key={player[0]} style={layout.panelLabel}>
+            <div key={player[0]} style={layout.playerPair}>
               <div style={layout.td}>
                 {
                   player[0]===this.props.current.username ?
-                    player[0] + " *" :
+                    <b>{player[0]}</b> :
                     player[0]
                 }
               </div> 
               
-              <div style={layout.td}>
+              <div style={layout.td2}>
                 {player[1] ? "Ready" : "Unready"}
               </div>
             </div>
