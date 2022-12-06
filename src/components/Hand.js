@@ -1,16 +1,12 @@
 import React, { Component } from "react";
 import { layout } from "../Layout.js";
 import Card from "./Card";
+import Flip from "./Flip";
 
 class Hand extends Component {
   render() {
     return (
       <div>
-        {this.props.current.deck.length > 0 &&
-          <button style={layout.flip} onClick={this.props.flipHandler}>
-            Flip
-          </button>
-        }
         <div style={layout.hand}>
           {this.props.current.deck.map((card, index) => {
               if (card === "  "){
@@ -32,6 +28,10 @@ class Hand extends Component {
             })
           }
         </div>
+
+        {this.props.current.deck.length > 0 && 
+          <Flip handler={this.props.flipHandler}/>
+        }
       </div>
     );
   }
