@@ -115,13 +115,11 @@ export default class Model {
   deal(randInt) {
     let hand = []
     for (let i = 0; i < this.deck.length; i++) {
-      if (i % this.players.length === this.playerNum) {
-        if (this.players.length === 1 && i > Math.floor(this.deck.length / 2) - 1) {
-          hand.push('  ');
-        }
-        else {
-          hand.push(this.deck[i]);
-        }
+      if (
+        i % this.players.length === this.playerNum &&
+        !(this.players.length === 1 && i > Math.floor(this.deck.length/2)-1)
+      ) {
+        hand.push(this.deck[i])
       }
     }
     this.deck = hand
