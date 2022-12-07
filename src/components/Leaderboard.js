@@ -3,7 +3,9 @@ import { layout } from "../Layout.js";
 
 class Leaderboard extends Component {
   render() {
-    return <div></div>;
+    return <div>
+      To be implemented...
+    </div>;
   }
 }
 
