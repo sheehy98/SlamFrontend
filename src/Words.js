@@ -2591,6 +2591,7 @@ export const Words = [
     "trot",
     "trow",
     "troy",
+    "true",
     "tsar",
     "tuba",
     "tube",

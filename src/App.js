@@ -26,7 +26,7 @@ import Slam from "./components/Slam";
 import Leaderboard from "./components/Leaderboard";
 
 import io from "socket.io-client";
-const socket = io.connect('https://playslamapi.herokuapp.com/', { transports : ['websocket'] })
+const socket = io.connect('https://slam-backend.adaptable.app/', { transports : ['websocket'] })
 
 function App() {
   const [model, setModel] = React.useState(new Model());
