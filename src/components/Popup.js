@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 import { layout } from "../Layout.js";
-import Center from "./Center";
-import Hand from "./Hand";
-import Winner from "./Winner";
 
 class Popup extends Component {
   render() {
